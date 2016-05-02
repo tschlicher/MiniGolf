@@ -28,7 +28,7 @@ public class Round
        int holesPlayed;
        
        //this will be used to help calculate the users current score.
-       int parTotal;
+              int parTotal;
        
        //this will be used to add up all strokes a customer has done up to a hole
        //at this point if the customer has lets say 6 strokes on the first two
@@ -41,11 +41,14 @@ public class Round
        return 0;
    }
    
-   public int numberOfHolesPlayed()
+   public int numberOfHolesPlayed(int holesPlayed)
    {
        //This method will need to calculate how many holes have been played
+       //This will be calculated on how many times the ball has fallen into a hole which has 
+       //sensors to indicate and return the new numberOfHoles played
+       int numberOfHoles = holesPlayed;
        
-       return 0;
+       return numberOfHoles;
    }
    
    public void enterScore(int strokes)
@@ -62,6 +65,7 @@ public class Round
    
    public int[] scoreDetail()
    {
+      //this is where the player will swipe his/her card and to keep track of the score
        int[] madeUp = {};
       return madeUp;
    }
