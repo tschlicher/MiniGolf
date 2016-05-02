@@ -24,13 +24,13 @@ public class Round
        //we need to count up the number of pars for holes played: i.e. hole one
        // is a par 4, hole two is a par 3 so total is 7 pars played so far....
        
-       //holesPlayed - used to get the number of holes played
-       int holesPlayed;
+       //holesCompleted - used to get the number of holes played
+       int holesCompleted;
        
-       //this will be used to help calculate the users current score.
+       //parTotal - used to help calculate the users current score.
        int parTotal;
        
-       //this will be used to add up all strokes a customer has done up to a hole
+       //attemptsPerHole - used to add up all strokes a customer has done up to a hole
        //at this point if the customer has lets say 6 strokes on the first two
        //holes and the total combined par is 7 for the first two holes, then the user 
        //is -1 under par.
@@ -44,6 +44,18 @@ public class Round
    public int numberOfHolesPlayed()
    {
        //This method will need to calculate how many holes have been played
+       
+       //holesPerRound will hold the maximum amount of holes a user can play
+       //this round. i.e. minigolf usually has 9 or 18 holes per a round.
+       int holesPerRound;
+       
+       //holesCompleted - used to find how many holes a user has suceesfully 
+       //finished.
+       int holesCompleted;
+       
+       //holesLeft - used to hold the amount of holes a player has left until
+       //the round is finished.
+       int holesLeft;
        
        return 0;
    }
