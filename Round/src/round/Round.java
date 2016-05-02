@@ -7,7 +7,7 @@ package round;
 
 /** 
  *
- * @author thomas
+ * @author Alexander Infante
  */
 public class Round 
 {
@@ -41,6 +41,7 @@ public class Round
        return 0;
    }
    
+   @Test
    public int numberOfHolesPlayed(int holesPlayed)
    {
        //This method will need to calculate how many holes have been played
@@ -51,6 +52,7 @@ public class Round
        return numberOfHoles;
    }
    
+   @Test
    public void enterScore(int strokes)
    {
        //this method takes in 'int strokes' which is the number of times
@@ -63,9 +65,10 @@ public class Round
        
    }
    
+   @Test
    public int[] scoreDetail()
    {
-      //this is where the player will swipe his/her card and to keep track of the score
+      //this is where the player will swipe his/her card at the end of all the holes
        int[] madeUp = {};
       return madeUp;
    }
