@@ -7,7 +7,7 @@ package round;
 
 /** 
  *
- * @author Alexander Infante
+ * @author Saurel
  */
 public class Round 
 {
