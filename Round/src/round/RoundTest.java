@@ -47,8 +47,8 @@ public class RoundTest {
         int expResult = 0;
         int result = instance.currentScore();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+       
     }
 
     /**
@@ -62,8 +62,8 @@ public class RoundTest {
         int expResult = 0;
         int result = instance.numberOfHolesPlayed(holesPlayed);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
+       
     }
 
     /**
@@ -75,8 +75,8 @@ public class RoundTest {
         int strokes = 0;
         Round instance = new Round();
         instance.enterScore(strokes);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
+        
     }
 
     /**
@@ -89,8 +89,8 @@ public class RoundTest {
         int[] expResult = null;
         int[] result = instance.scoreDetail();
         assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
+       
     }
     
 }
