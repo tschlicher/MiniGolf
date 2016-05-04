@@ -72,7 +72,18 @@ public class RoundTest {
         int result = instance.currentScore(holesCompleted, parTotal, attempts);
         assertEquals(expResult, result);
     }
-
+    
+    @Test()
+    public void testCurrentScore3() {
+        System.out.println("currentScore");
+        int holesCompleted = 3;
+        int parTotal = 12;
+        int attempts = 10;
+        Round instance = new Round();
+        int expResult = 2;
+        int result = instance.currentScore(holesCompleted, parTotal, attempts);
+        assertEquals(expResult, result);
+    }
     /**
      * Test of numberOfHolesPlayed method, of class Round.
      */
