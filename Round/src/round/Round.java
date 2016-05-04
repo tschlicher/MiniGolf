@@ -9,6 +9,8 @@ package round;
  *
  * @author thomas
  */
+
+//all fields so far can be changed or modified to make them better!!
 public class Round 
 {
    public int currentScore()
@@ -65,7 +67,7 @@ public class Round
        //this method takes in 'int strokes' which is the number of times
        //a player took to make the ball in.
        
-       //numberOfSwings is storing total attempts for 1 hole.
+       //numberOfSwings - used to store the total attempts for 1 hole.
        int numberOfSwings = strokes;
        
        
@@ -74,7 +76,9 @@ public class Round
    
    public int[] scoreDetail()
    {
-       int[] madeUp = {};
-      return madeUp;
+       //allScores - used to hold all strokes per user per hole for all holes
+       //in the round. i.e. hole 1 = 3 stroked, hole 2 = 1 stroke.....
+       int[] allScores = {};
+      return allScores;
    }
 }
