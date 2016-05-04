@@ -11,24 +11,31 @@ package round;
  */
 public class Round 
 {
-   public int currentScore()
-   {
-       return 0;
-   }
+	public int [] scores = new int[18]; //the typical holes in a golf game
+	public int currentScore()
+	{
+		int currentScore = 0
+		return currentScore;
+	}
    
-   public int numberOfHolesPlayed()
-   {
-       return 0;
-   }
+	///this method return the number of completed holes in this round
+	public int numberOfHolesPlayed()
+	{
+		int numberOfHolesPlayed
+		return numberOfHolesPlayed;
+	}
    
-   public void enterScore()
-   {
-       
-   }
+	public void enterScore(int totalStrokes)
+	{
+		
+	}
    
-   public int[] scoreDetail()
-   {
-       int[] madeUp = {};
-      return madeUp;
-   }
+	public int[] scoreDetail()
+	{
+		return scores;
+	}
+   
+	public int[] scoredetail(){
+	
+	}
 }
