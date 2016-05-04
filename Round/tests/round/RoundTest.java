@@ -43,22 +43,34 @@ public class RoundTest {
     @Test
     public void testCurrentScore() {
         System.out.println("currentScore");
-        int holesCompleted = 0;
+        int holesCompleted = 3;
+        int parTotal = 12;
+        int attempts = 10;
+        Round instance = new Round();
+        int expResult = 2;
+        int result = instance.currentScore(holesCompleted, parTotal, attempts);
+        assertEquals(expResult, result);
+    }
+    
+    @Test
+    public void testCurrentScore2() {
+        System.out.println("currentScore");
+        int holesCompleted = -1;
         int parTotal = 0;
         int attempts = 0;
-        try{
-        if(holesCompleted <= 0 || parTotal <= 0 && attempts <= 0){
-            
+        if(holesCompleted < 0 || holesCompleted > 18){
+              System.out.println("Error: There can't be less than 1 hole in minigolf and no greater than 18 holes.");  
+            }
+        else if(parTotal < 0 || attempts < 0){
+            System.out.println("Error: There can't be negative numbers for parTotal or attemps"); 
         }
-        }catch(Exception e){
-            
+        else if(holesCompleted == 0 && parTotal == 0 && attempts == 0){
+            System.out.println("Error: Game has not yet been started");
         }
         Round instance = new Round();
         int expResult = 0;
         int result = instance.currentScore(holesCompleted, parTotal, attempts);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
