@@ -58,10 +58,7 @@ public class RoundTest {
         int holesCompleted = -1;
         int parTotal = 0;
         int attempts = 0;
-        if(holesCompleted < 0 || holesCompleted > 18){
-              System.out.println("Error: There can't be less than 1 hole in minigolf and no greater than 18 holes.");  
-            }
-        else if(parTotal < 0 || attempts < 0){
+        if(parTotal < 0 || attempts < 0){
             System.out.println("Error: There can't be negative numbers for parTotal or attemps"); 
         }
         else if(holesCompleted == 0 && parTotal == 0 && attempts == 0){
@@ -79,6 +76,9 @@ public class RoundTest {
         int holesCompleted = 3;
         int parTotal = 12;
         int attempts = 10;
+        if(holesCompleted < 0){
+            System.out.println("Error: There can't be negative amount of holes completed in minigolf!");  
+        }
         Round instance = new Round();
         int expResult = 2;
         int result = instance.currentScore(holesCompleted, parTotal, attempts);
@@ -117,12 +117,29 @@ public class RoundTest {
     @Test
     public void testScoreDetail() {
         System.out.println("scoreDetail");
+        int[] score = {2,5,6,3,1,4,2,1,5};
+        if(score.length == 9 || score.length == 18){
+            System.out.println("There are 8 scores and 8 holes played, works fine");
+        }
+        else if(score.length != 9){
+            System.out.println("There needs to be 9 scores exact for a 9 hole minigolf game!");
+        }
         Round instance = new Round();
         int[] expResult = null;
-        int[] result = instance.scoreDetail();
+        int[] result = instance.scoreDetail(score);
         assertArrayEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
+    @Test
+    public void testScoreDetail2() {
+        System.out.println("scoreDetail");
+        int[] score = {2,5,6,3,1,4,2,1,5,6,4,6,4,2,3,3,4,5};
+        if(score.length != 18){
+            System.out.println("There needs to be 18 scores exact for a 9 hole minigolf game!");
+        }
+        Round instance = new Round();
+        int[] expResult = null;
+        int[] result = instance.scoreDetail(score);
+        assertArrayEquals(expResult, result);
+    }
 }
