@@ -16,6 +16,9 @@ public class Round
    //a new hole
    boolean netConn = true;
    
+   //total holes is 18
+   int totHoles = 18;
+   
    public int currentScore()
    {
        //cuurentScore method will calculate the players score so far
@@ -33,7 +36,7 @@ public class Round
        int holesPlayed;
        
        //this will be used to help calculate the users current score.
-              int parTotal;
+       int parTotal;
        
        //this will be used to add up all strokes a customer has done up to a hole
        //at this point if the customer has lets say 6 strokes on the first two
@@ -47,12 +50,15 @@ public class Round
    }
    
    @Test
-   public int numberOfHolesPlayed(int holesPlayed)
+   public int numberOfHolesPlayed(int holesPlayed, int totHoles)
    {
        //This method will need to calculate how many holes have been played
        //This will be calculated on how many times the ball has fallen into a hole which has 
        //sensors to indicate and return the new numberOfHoles played
        int numberOfHoles = holesPlayed;
+       
+       //This will calculate the number of holes that are left in the game
+       int holesLeft = totHoles - numberOfHoles;
        
        return numberOfHoles;
    }
@@ -65,9 +71,7 @@ public class Round
        
        //numberOfSwings is storing total attempts for 1 hole.
        int numberOfSwings = strokes;
-       
-       
-       
+
    }
    
    @Test
