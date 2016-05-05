@@ -11,6 +11,11 @@ package round;
  */
 public class Round 
 {
+   //this is to test the network to see the status and on what server 
+   //to run off of.  This will be run every time a new player starts
+   //a new hole
+   boolean netConn = true;
+   
    public int currentScore()
    {
        //cuurentScore method will calculate the players score so far
@@ -72,4 +77,17 @@ public class Round
        int[] madeUp = {};
       return madeUp;
    }
+   
+   @Test 
+   public boolean NetworkConnection( boolean netConn )
+   {
+       //this will test the network connection to see if where it stands
+       boolean check = netConn;
+       
+       //check to see if we should stay on the main server or switch to the in 
+       //house server
+
+       return check;
+   }
+   
 }
