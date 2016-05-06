@@ -13,6 +13,11 @@ package round;
 //all fields so far can be changed or modified to make them better!!
 public class Round 
 {
+   //this is to test the network to see the status and on what server 
+   //to run off of.  This will be run every time a new player starts
+   //a new hole
+   boolean netConn = true;
+   
    public int currentScore()
    {
        //cuurentScore method will calculate the players score so far
